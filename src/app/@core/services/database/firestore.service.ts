@@ -10,7 +10,7 @@ import { IDataBaseService } from './idatabase.service';
 import { IProduct } from '@shared/schemas/product';
 
 @Injectable()
-export class FirebaseService implements IDataBaseService<IProduct> {
+export class FirestoreService implements IDataBaseService<IProduct> {
   TABLE = 'products';
 
   constructor(private afs: AngularFirestore) {}

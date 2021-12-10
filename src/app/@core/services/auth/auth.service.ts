@@ -10,7 +10,7 @@ import { IAuthService } from './iauth.service';
 @Injectable({
   providedIn: null,
 })
-export class FireBaseService implements IAuthService {
+export class AuthService implements IAuthService {
   constructor(private fireAuthService: AngularFireAuth) {}
 
   login(): Observable<IUser> {

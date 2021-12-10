@@ -22,7 +22,7 @@ import { FormComponent } from './components/form/form.component';
 import * as fromProduct from './state/product.reducer';
 import { ProductEffects } from './state/product.effects';
 import { IDataBaseService } from '@core/services/database/idatabase.service';
-import { FirebaseService } from '@core/services/database/firebase.service';
+import { FirestoreService } from '@core/services/database/firestore.service';
 
 @NgModule({
   declarations: [CrudComponent, ListComponent, FormComponent],
@@ -46,7 +46,7 @@ import { FirebaseService } from '@core/services/database/firebase.service';
     MatCardModule,
   ],
   providers: [
-    { provide: IDataBaseService, useClass: FirebaseService },
+    { provide: IDataBaseService, useClass: FirestoreService },
     { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
   ],
 })
