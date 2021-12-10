@@ -10,12 +10,12 @@ import { IAuthService } from './iauth.service';
 @Injectable({
   providedIn: null,
 })
-export class AuthService implements IAuthService {
-  constructor(private fireAuthService: AngularFireAuth) {}
+export class FireAuthService implements IAuthService {
+  constructor(private afa: AngularFireAuth) {}
 
   login(): Observable<IUser> {
     const provider = new firebase.auth.GoogleAuthProvider();
-    const responseAuth = from(this.fireAuthService.signInWithPopup(provider)).pipe(
+    const responseAuth = from(this.afa.signInWithPopup(provider)).pipe(
       map((fireUser) => {
         const objUser: IUser = {
           uid: fireUser.user?.uid!,
@@ -36,7 +36,7 @@ export class AuthService implements IAuthService {
   }
 
   logout(): Observable<boolean> {
-    return from(this.fireAuthService.signOut()).pipe(
+    return from(this.afa.signOut()).pipe(
       map(() => {
         return true;
       }),
@@ -47,7 +47,7 @@ export class AuthService implements IAuthService {
   }
 
   isLoggedIn(): Observable<IUser> {
-    return this.fireAuthService.authState.pipe(
+    return this.afa.authState.pipe(
       map((fireUser) => {
         if (fireUser === null) {
           throw new Error('user unavailable in state manager');
@@ -67,6 +67,6 @@ export class AuthService implements IAuthService {
   }
 
   sendPasswordResetEmail(email: string): void {
-    from(this.fireAuthService.sendPasswordResetEmail(email));
+    from(this.afa.sendPasswordResetEmail(email));
   }
 }

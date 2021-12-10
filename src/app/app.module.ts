@@ -10,7 +10,7 @@ import { AppStoreModule } from '@core/app.store.module';
 import { AppComponent } from './app.component';
 
 import { IAuthService } from '@core/services/auth/iauth.service';
-import { AuthService } from './@core/services/auth/auth.service';
+import { FireAuthService } from './@core/services/auth/fire-auth.service';
 
 @NgModule({
   imports: [
@@ -25,7 +25,7 @@ import { AuthService } from './@core/services/auth/auth.service';
   providers: [
     {
       provide: IAuthService,
-      useClass: AuthService,
+      useClass: FireAuthService,
     },
   ],
   bootstrap: [AppComponent],
