@@ -15,8 +15,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { PrivateComponent } from './layouts/pages/dashboard/private.component';
-import { PublicComponent } from './layouts/pages/main/public.component';
+import { DashboardComponent } from './layouts/pages/dashboard/dashboard.component';
+import { MainComponent } from './layouts/pages/main/main.component';
 import { MenuComponent } from './layouts/menu/menu.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 
@@ -35,8 +35,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
     MatRippleModule,
     MatTooltipModule,
   ],
-  declarations: [PrivateComponent, PublicComponent, MenuComponent, FooterComponent],
-  exports: [PrivateComponent, PublicComponent],
+  declarations: [DashboardComponent, MainComponent, MenuComponent, FooterComponent],
+  exports: [DashboardComponent, MainComponent],
 })
 export class AppLayoutsModule {
   constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {

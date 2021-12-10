@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
 import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
-import { PrivateComponent } from '@core/layouts/pages/dashboard/private.component';
+import { DashboardComponent } from '@core/layouts/pages/dashboard/dashboard.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['home']);
 
-export const PrivateRoutes: Routes = [
+export const DashboardRoutes: Routes = [
   {
     path: 'app',
-    component: PrivateComponent,
+    component: DashboardComponent,
     children: [
       {
         path: 'dashboard',

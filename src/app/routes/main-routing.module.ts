@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
 
-import { PublicComponent } from '@core/layouts/pages/main/public.component';
+import { MainComponent } from '@core/layouts/pages/main/main.component';
 
-export const PublicRoutes: Routes = [
+export const MainRoutes: Routes = [
   {
     path: '',
-    component: PublicComponent,
+    component: MainComponent,
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       {
