@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ItensSide } from './dashboard.component.list';
+import { SideMenuItems } from './side-menu-items';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,5 +8,5 @@ import { ItensSide } from './dashboard.component.list';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
-  public headerSide = ItensSide;
+  public sideMenu = SideMenuItems;
 }

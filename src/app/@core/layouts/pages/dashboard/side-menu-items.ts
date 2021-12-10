@@ -1,7 +1,7 @@
-export const ItensSide = {
-  nivel1: {
+export const SideMenuItems = {
+  menu1: {
     title: 'Itens',
-    itens: [
+    items: [
       {
         name: 'Dashboard',
         icon: 'home',
@@ -14,9 +14,9 @@ export const ItensSide = {
       },
     ],
   },
-  nivel2: {
+  menu2: {
     title: 'Anothers',
-    itens: [
+    items: [
       {
         name: 'Vacation Itinerary',
         updated: new Date('2/20/16'),
