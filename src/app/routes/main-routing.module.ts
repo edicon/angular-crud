@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { PublicComponent } from '@core/layouts/public/public.component';
+import { PublicComponent } from '@core/layouts/pages/main/public.component';
 
 export const PublicRoutes: Routes = [
   {
@@ -10,11 +10,11 @@ export const PublicRoutes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       {
         path: 'home',
-        loadChildren: () => import('src/app/pages/public/home/home.module').then((m) => m.HomeModule),
+        loadChildren: () => import('@pages/main/home/home.module').then((m) => m.HomeModule),
       },
       {
         path: 'register',
-        loadChildren: () => import('src/app/pages/public/auth/register/register.module').then((m) => m.RegisterModule),
+        loadChildren: () => import('@pages/main/auth/register/register.module').then((m) => m.RegisterModule),
       },
     ],
   },

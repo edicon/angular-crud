@@ -15,8 +15,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { PrivateComponent } from './layouts/private/private.component';
-import { PublicComponent } from './layouts/public/public.component';
+import { PrivateComponent } from './layouts/pages/dashboard/private.component';
+import { PublicComponent } from './layouts/pages/main/public.component';
 import { MenuComponent } from './layouts/menu/menu.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 

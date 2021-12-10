@@ -4,7 +4,7 @@ import { environment } from '@env/environment';
 
 import * as fromApp from './reducers/app.reducer';
 import * as fromAuth from './reducers/auth.reducer';
-import * as fromProduct from '../pages/private/crud/state/product.reducer';
+import * as fromProduct from '../pages/dashboard/crud/state/product.reducer';
 
 export interface AppState {
   [fromApp.appFeatureKey]: fromApp.State;

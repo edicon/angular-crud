@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import { AppState } from '@store/store.module';
-import { loadAllProducts } from '../crud/state/product.actions';
+import { loadAllProducts } from './state/product.actions';
 
 @Component({
   selector: 'app-crud',
