@@ -51,3 +51,5 @@ TESTS-*.xml
 node_modules
 .firebase
 firebase-debug.log
+
+.angulardoc.json
